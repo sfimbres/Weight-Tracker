@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Tracker | Home</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-container">
+
+            <div id="logo">
+                <h1>Weight Tracker</h1>
+            </div>
+            <div id="nav">
+                <a><div class="nav-btn">One</div></a>
+                <a><div class="nav-btn">Two</div></a>
+                <a><div class="nav-btn">Three</div></a>
+            </div>
+            <div id="profile">
+                <span>@username</span>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div id="content-body">
+        <div id="main">
+            <div id="title"><h2>Home</h2></div>
+
+            <div id="weight-display">
+                <div class="display">
+                    <h5>Current Weight</h5>
+                    <h4 id="current-weight">200</h4>
+                </div>
+                <div class="display">
+                    <h5>Lowest Weight</h5>
+                    <h4 id="lowest-weight">200</h4>
+                </div>
+                <div class="display">
+                    <h5>Goal Weight</h5>
+                    <h4 id="goal-weight">150</h4>
+                </div>
+            </div>
+
+            <div id="form-container">
+                <h3>Today's Weight</h3>
+                <form id="form">
+                    <input id="input" type="text" />
+                    <button type="submit">ADD</button>
+                </form>
+            </div>
+
+            
+            <div id="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+              
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </div>
+        
+    </div>
+    
+    <script src="main.js"></script>
+</body>                                                                                                                                           
+</html>
