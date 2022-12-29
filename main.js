@@ -1,3 +1,7 @@
+
+
+
+
 let form = document.getElementById("form");
 let input = document.getElementById("input");
 let currentWeight = document.getElementById("current-weight");
@@ -82,4 +86,5 @@ let updateData = () => {
 
     input.value = "";
 };
+
 

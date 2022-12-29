@@ -100,3 +100,16 @@ button {
     flex-direction: center;
     align-items: center;
 }
+
+#profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
