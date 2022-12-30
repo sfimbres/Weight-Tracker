@@ -1,7 +1,3 @@
-
-
-
-
 let form = document.getElementById("form");
 let input = document.getElementById("input");
 let currentWeight = document.getElementById("current-weight");
@@ -72,6 +68,8 @@ let updateData = () => {
         weight: input.value
     })
 
+    localStorage.setItem("data", JSON.stringify(data));
+
     chart.data.labels.push(currentDate);
     chart.data.datasets.forEach((dataset) => {
         dataset.data.push(input.value);
@@ -86,5 +84,27 @@ let updateData = () => {
 
     input.value = "";
 };
+
+(() => {
+
+    data = JSON.parse(localStorage.getItem("data")) || {
+        currentWeight: 200,
+        lowestWeight: 200,
+        goalWeight: 150,
+        weightArray: [{
+            date: "12-19-2022",
+            weight: 200,
+        }]
+    };
+    console.log(data);
+    data.weightArray.forEach((weight) => {
+        chart.data.labels.push(weight.date);
+        chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(weight.weight);
+    });
+    chart.update();
+    });
+
+})();
 
 
